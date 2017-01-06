@@ -1,0 +1,19 @@
+{
+  "name": "virtual-pharmacist",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A voice-controlled drug inventory management application for rural health centers.",
+  "main": "app.js",
+  "engines": {
+    "node": "6.3.1"
+  },
+  "scripts": {
+    "start": "node $NODE_DEBUG_OPTION app"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "request": "^2.79.0"
+  }
+}
