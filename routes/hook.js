@@ -12,7 +12,7 @@ router.use('/', function(req, res) {
 
     if(body) {
         if(body.result) {
-            action = body.result.action,
+            action = body.result.action.replace(".",""),
             parameters = body.result.parameters;
 
             if(typeof actionHandler[action] != 'undefined') {

@@ -4,20 +4,22 @@ const request = require('request');
 class ActionHandler {
     constructor() {}
 
-    dosageCheck(parameters) {
+    createnewcontract(parameters) {
         return new Promise((resolve, reject) => {
             let url = config.db.url,
                 options;
 
             // need a parameter called 'drug'
-            if(typeof parameters['drug'] != 'undefined') {
+            if(typeof parameters['price'] != 'undefined') {
                 options = {
                     url: url,
                     headers: {
                         'Content-Type':'application/json'
                     },
                     body: JSON.stringify({
-                        'inventory': parameters['drug']
+                        'person1': parameters['person1'],
+                        'person2': parameters['person2'],
+                        'price': parameters['price']
                     })
                 };
 
